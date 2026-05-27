@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>PH Produtos</title>
+
+        <link rel="stylesheet" href="style.css">
+
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+            </head>
+
+            <body>
+
+            <header>
+
+              <h1>PH PRODUTOS</h1>
+
+                <div class="total-box">
+                    Total: R$ <span id="totalValue">0.00</span>
+                      </div>
+
+                      </header>
+
+                      <div class="container">
+
+                        <div class="top-actions">
+
+                            <div class="search-box">
+                                  <input type="text" id="searchInput" placeholder="Pesquisar produto...">
+                                      </div>
+
+                                          <button class="btn btn-add" onclick="openModal()">
+                                                + Adicionar Produto
+                                                    </button>
+
+                                                      </div>
+
+                                                        <div class="products-grid" id="productsGrid"></div>
+
+                                                          <div class="empty" id="emptyMessage">
+                                                              Nenhum produto cadastrado.
+                                                                </div>
+
+                                                                </div>
+
+                                                                <div class="modal" id="productModal">
+
+                                                                  <div class="modal-content">
+
+                                                                      <h2 id="modalTitle">Adicionar Produto</h2>
+
+                                                                          <input type="text" id="productName" placeholder="Nome do produto">
+
+                                                                              <input type="number" id="productPrice" placeholder="Valor">
+
+                                                                                  <input type="text" id="productCategory" placeholder="Categoria">
+
+                                                                                      <input type="file" id="productImage" accept="image/*">
+
+                                                                                          <button class="btn btn-add" onclick="saveProduct()">
+                                                                                                Salvar Produto
+                                                                                                    </button>
+
+                                                                                                      </div>
+
+                                                                                                      </div>
+
+                                                                                                      <script src="script.js"></script>
+
+                                                                                                      </body>
+                                                                                                      </html>
