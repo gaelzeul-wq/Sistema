@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <title>PH Produtos</title>
+      <title>PH Sistema</title>
 
         <link rel="stylesheet" href="style.css">
 
@@ -16,59 +17,93 @@
 
             <header>
 
-              <h1>PH PRODUTOS</h1>
+              <h1>PH SISTEMA</h1>
 
-                <div class="total-box">
-                    Total: R$ <span id="totalValue">0.00</span>
+                <div class="pedido-total">
+                    Pedido: R$ <span id="pedidoTotal">0.00</span>
                       </div>
 
                       </header>
 
                       <div class="container">
 
-                        <div class="top-actions">
+                        <!-- ESTOQUE -->
+                          <section class="estoque">
 
-                            <div class="search-box">
-                                  <input type="text" id="searchInput" placeholder="Pesquisar produto...">
-                                      </div>
+                              <div class="section-top">
 
-                                          <button class="btn btn-add" onclick="openModal()">
-                                                + Adicionar Produto
-                                                    </button>
+                                    <h2>📦 Estoque</h2>
 
-                                                      </div>
+                                          <button class="btn green" onclick="openModal()">
+                                                  + Produto
+                                                        </button>
 
-                                                        <div class="products-grid" id="productsGrid"></div>
+                                                            </div>
 
-                                                          <div class="empty" id="emptyMessage">
-                                                              Nenhum produto cadastrado.
-                                                                </div>
+                                                                <input type="text" id="searchInput" placeholder="Pesquisar produto...">
 
-                                                                </div>
+                                                                    <div class="products-grid" id="productsGrid"></div>
 
-                                                                <div class="modal" id="productModal">
+                                                                      </section>
 
-                                                                  <div class="modal-content">
+                                                                        <!-- PEDIDO -->
+                                                                          <section class="pedido">
 
-                                                                      <h2 id="modalTitle">Adicionar Produto</h2>
+                                                                              <div class="section-top">
+                                                                                    <h2>🛒 Pedido do Cliente</h2>
+                                                                                        </div>
 
-                                                                          <input type="text" id="productName" placeholder="Nome do produto">
+                                                                                            <div id="pedidoItems"></div>
 
-                                                                              <input type="number" id="productPrice" placeholder="Valor">
+                                                                                                <div class="pedido-footer">
 
-                                                                                  <input type="text" id="productCategory" placeholder="Categoria">
+                                                                                                      <h3>
+                                                                                                              Total: R$ <span id="pedidoTotalBottom">0.00</span>
+                                                                                                                    </h3>
 
-                                                                                      <input type="file" id="productImage" accept="image/*">
+                                                                                                                          <div class="pedido-buttons">
 
-                                                                                          <button class="btn btn-add" onclick="saveProduct()">
-                                                                                                Salvar Produto
-                                                                                                    </button>
+                                                                                                                                  <button class="btn red" onclick="limparPedido()">
+                                                                                                                                            Limpar
+                                                                                                                                                    </button>
 
-                                                                                                      </div>
+                                                                                                                                                            <button class="btn green">
+                                                                                                                                                                      Finalizar
+                                                                                                                                                                              </button>
 
-                                                                                                      </div>
+                                                                                                                                                                                    </div>
 
-                                                                                                      <script src="script.js"></script>
+                                                                                                                                                                                        </div>
 
-                                                                                                      </body>
-                                                                                                      </html>
+                                                                                                                                                                                          </section>
+
+                                                                                                                                                                                          </div>
+
+                                                                                                                                                                                          <!-- MODAL -->
+
+                                                                                                                                                                                          <div class="modal" id="modal">
+
+                                                                                                                                                                                            <div class="modal-content">
+
+                                                                                                                                                                                                <h2 id="modalTitle">Adicionar Produto</h2>
+
+                                                                                                                                                                                                    <input type="text" id="productName" placeholder="Nome">
+
+                                                                                                                                                                                                        <input type="number" id="productPrice" placeholder="Preço">
+
+                                                                                                                                                                                                            <input type="text" id="productCategory" placeholder="Categoria">
+
+                                                                                                                                                                                                                <input type="file" id="productImage" accept="image/*">
+
+                                                                                                                                                                                                                    <button class="btn green" onclick="saveProduct()">
+                                                                                                                                                                                                                          Salvar Produto
+                                                                                                                                                                                                                              </button>
+
+                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                <script src="script.js"></script>
+
+                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                </html>
